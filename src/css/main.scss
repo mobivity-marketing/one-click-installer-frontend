@@ -1,0 +1,141 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700);
+@import 'normalize';
+
+// Variables
+
+$green: #8dc63f;
+$greenLight: rgba(141, 198, 63, 0.5);
+$greenDark: #6daa13;
+$grey: #949ca1;
+$greyLight: rgba(148, 156, 161, 0.5);
+$red: #F04C41;
+$redDark: #d42c1c;
+$black: #58595b;
+$blackLight: rgba(88, 89, 91, 0.5);
+$white: #f5f5f5;
+
+$transition: all .35s ease;
+
+$gutter: 20px;
+
+// General/Typography
+
+html, body {
+	width: 840px;
+	height: 450px;
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+	color: $black;
+	background: url(../images/bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h1, h2, h3 {
+	font-weight: 400;
+	padding: 0;
+	margin: 0;
+}
+
+p {
+	font-weight: 300;
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	padding: 0;
+	margin: 0;
+	font-weight: 300;
+	color: inherit;
+	transition: $transition;
+
+	&:hover {
+		color: $green;
+		text-decoration: none;
+	}
+
+	&.button {
+		background: $green;
+		font-size: 1.5em;
+		padding: $gutter/2 $gutter;
+		border-radius: 7px;
+		color: $white;
+		transition: $transition;
+
+		&:hover {
+			background: $greenDark;
+		}
+
+		&.red {
+			background: $red;
+
+			&:hover {
+				background: $redDark;
+			}
+
+		}
+
+	}
+
+}
+
+// Page Wrapper
+
+#wrap {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -80px;
+}
+
+// Introduction
+
+#introduction {
+	text-align: center;
+	padding-top: $gutter;
+	padding-bottom: $gutter;
+	
+	img.logo {
+		width: 80%;
+		margin: 0px auto;
+	}
+
+	h2 {
+		color: $green;
+		padding: $gutter 0;
+	}
+
+	p {
+		font-size: 1.5em;
+		padding-bottom: $gutter;
+	}
+
+	.col-md-6 {
+		text-align: center;
+	}
+
+	span {
+		font-weight: 400;
+	}
+
+}
+
+// Footer Throughout Page
+
+hr {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+footer {
+	height: 80px;
+	margin: 0px auto;
+	text-align: center;
+	padding: $gutter 0;
+	color: $blackLight;
+}
