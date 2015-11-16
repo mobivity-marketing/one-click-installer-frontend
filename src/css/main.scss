@@ -222,14 +222,23 @@ a {
 		padding: $gutter*2 0;
 	}
 
+	.button {
+		padding: $gutter/3 $gutter;
+	}
+
 }
 
 // Completion Container
 
 #completion {
 	
+	h2 {
+
+	}
+
 	p {
 		padding: $gutter 0;
+		padding-bottom: $gutter*1.5;
 	}
 
 }
