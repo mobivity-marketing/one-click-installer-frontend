@@ -5,6 +5,7 @@
 
 $green: #8dc63f;
 $greenLight: rgba(141, 198, 63, 0.5);
+$greenReallyLight: rgba(141, 198, 63, 0.25);
 $greenDark: #6daa13;
 $grey: #949ca1;
 $greyLight: rgba(148, 156, 161, 0.5);
@@ -61,8 +62,9 @@ a {
 
 	&.button {
 		background: $green;
-		font-size: 1.5em;
-		padding: $gutter/2 $gutter;
+		font-size: 1.25em;
+		font-weight: 400;
+		padding: $gutter/3 $gutter/2;
 		border-radius: 7px;
 		color: $white;
 		transition: $transition;
@@ -84,6 +86,10 @@ a {
 
 }
 
+.hide {
+	display: none;
+}
+
 // Page Wrapper
 
 #wrap {
@@ -95,24 +101,29 @@ a {
 
 // Introduction
 
-#introduction {
+#introduction, #installation {
 	text-align: center;
-	padding-top: $gutter;
+	padding-top: $gutter*2;
 	padding-bottom: $gutter;
 	
 	img.logo {
 		width: 80%;
 		margin: 0px auto;
+		margin-bottom: $gutter;
+	}
+
+	.content {
+		padding: $gutter 0;
 	}
 
 	h2 {
 		color: $green;
-		padding: $gutter 0;
+		font-weight: 700;
 	}
 
 	p {
-		font-size: 1.5em;
-		padding-bottom: $gutter;
+		font-size: 1.25em;
+		padding: $gutter*2 0;
 	}
 
 	.col-md-6 {
@@ -123,6 +134,74 @@ a {
 		font-weight: 400;
 	}
 
+}
+
+// Installation
+
+#installation {
+
+	p {
+		padding: $gutter*1.5 0;
+	}
+
+	@mixin circle($size) {
+	  content: "";
+	  position: absolute;
+	  border-radius: 50%;
+	  left: calc(50% - #{$size/2});
+	  top: calc(50% - #{$size/2});
+	  width: $size;
+	  height: $size;
+	}
+
+	$size: 100px;
+	.progress-pie-chart {
+	  width: $size;
+	  height: $size;
+	  border-radius: 50%;
+	  background-color: $greenReallyLight;
+	  position: relative;
+	  &.gt-50 {
+	    background-color: $green;
+	  }
+	}
+	.ppc-progress {
+	  @include circle($size);
+	  clip: rect(0, $size, $size, #{$size/2});
+	  .ppc-progress-fill {
+	    @include circle($size);
+	    clip: rect(0, #{$size/2}, $size, 0);
+	    background: #8dc63f;
+	    transform: rotate(60deg);
+	  }
+	  .gt-50 & {
+	    clip: rect(0, #{$size/2}, $size, 0);
+	    .ppc-progress-fill {
+	      clip: rect(0, $size, $size, #{$size/2});
+	      background: white;
+	    }
+	  }
+	}
+	.ppc-percents {
+	  @include circle(#{$size/1.15});
+	  background: white;
+	  text-align: center;
+	  display: table;
+	  span {
+	    display: block;
+	    font-size: 1.75em;
+	    font-weight: bold;
+	    color: $green;
+	  }
+	}
+	.pcc-percents-wrapper {
+	  display: table-cell;
+	  vertical-align: middle;
+	}
+
+	.progress-pie-chart {
+	  margin: 0px auto;
+	}
 }
 
 // Footer Throughout Page
@@ -137,5 +216,5 @@ footer {
 	margin: 0px auto;
 	text-align: center;
 	padding: $gutter 0;
-	color: $blackLight;
+	color: $grey;
 }
