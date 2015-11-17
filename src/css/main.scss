@@ -277,17 +277,48 @@ a {
 	}
 }
 
+// Error Container
+
+#error {
+	
+	h2 {
+		padding-top: $gutter/2;
+		color: $red;
+	}
+
+	.col-sm-3 {
+
+		p {
+			font-weight: 700;
+			color: $black;
+
+			span {
+				color: $grey;
+			}
+
+		}
+
+	}
+
+	p {
+		padding: $gutter*1.75 0;
+	}
+
+}
+
 // Completion Container
 
 #completion {
 	
 	h2 {
-
+		padding: 0;
+		padding-top: $gutter*3;
+		padding-bottom: $gutter;
 	}
 
 	p {
-		padding: $gutter 0;
-		padding-bottom: $gutter*1.5;
+		padding: 0;
+		padding-bottom: $gutter;
 	}
 
 }

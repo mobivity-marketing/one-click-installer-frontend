@@ -25,7 +25,7 @@
           <img src="dist/images/sr-logo.png" alt="SmartReceipt&trade; Installation Tool" class="logo">
         </div>
         <div class="col-sm-6 minButton">
-          <a href="#" class="button grey">Minimize</a>
+          <a href="#" class="button grey" id="minInstall">Minimize</a>
         </div>
       </div>
 
@@ -52,10 +52,10 @@
 
           <p class="note"><span>Note:</span> The installation will take up to 10 minutes and will automatically close SubwayPOS&reg;.</p>
           <div class="col-sm-6">
-            <a href="#" class="button red">Cancel</a>
+            <a href="#" class="button red" id="cancelInstall">Cancel</a>
           </div>
           <div class="col-sm-6">
-            <a href="#" class="button">Continue</a>
+            <a href="#" class="button" id="continueInstall">Continue</a>
           </div>
         </div>
       </div>
@@ -64,7 +64,7 @@
 
       <!-- Start Installation Container -->
 
-      <div class="container" id="installation">
+      <div class="container hide" id="installation">
         <div class="content">
           <h2>Your Installation is Now in Progress</h2>
 
@@ -97,34 +97,46 @@
 
       <!-- End Installation Container -->
 
-      <!-- Installation Container -->
+      <!-- Start Error Container -->
 
-      <div class="container hide" id="installation">
+      <div class="container hide" id="error">
         <div class="content">
-          <h2>Your Installation is Now In Progress</h2>
-          <p>Should you run into any issues, please contact SmartReceipt&trade; Support at <span>(866) 688-7428</span>.</p>
-          <div class="progress-pie-chart" data-percent="49">
-            <div class="ppc-progress">
-              <div class="ppc-progress-fill"></div>
-            </div>
-            <div class="ppc-percents">
-              <div class="pcc-percents-wrapper">
-                <span>%</span>
-              </div>
-            </div>
+          <h2>An Error Occured During the Installation</h2>
+
+          <div class="col-sm-3">
+            <p>Store:<br> <span id="storeNumber">#12345678910</span></p>
+          </div>
+          <div class="col-sm-3">
+            <p>Terminal:<br> <span id="terminalNumber">#12345678910</span></p>
+          </div>
+          <div class="col-sm-3">
+            <p>Satellite:<br> <span id="satNumber">#12345678910</span></p>
+          </div>
+          <div class="col-sm-3">
+            <p>MAC Address:<br> <span id="macAddress">#12345678910</span></p>
+          </div>
+
+          <p>We could not find your store in our system. Please contact our Support Team at <br><span>(866) 688-7428</span> to complete the installation.</p>
+
+          <div class="col-sm-6">
+            <a href="#" class="button red" id="cancelInstall">Cancel</a>
+          </div>
+          <div class="col-sm-6">
+            <a href="#" class="button" id="viewLog">View Log</a>
           </div>
         </div>
       </div>
 
-      <!-- End Installation Container -->
+      <!-- End Error Container -->
 
       <!-- Completion Container -->
 
-      <div class="container hide" id="completion">
+      <div class="container" id="completion">
         <div class="content">
           <h2>SmartReceipt&trade; is Fully Installed!</h2>
-          <p>Please perform a test transaction to confirm that receipts are printing properly. If you have any questions, please contact SmartReceipt&trade; Support at <span>(866) 688-7428</span>. If your receipts are not printing after installation, please open the SmartReceipt&trade; tray icon, toggle SmartReceipt&trade; to <span>OFF</span> and contact SmartReceipt&trade; to assist with the installation.</p>
-          <a href="#" class="button">Finish Installation</a>
+          <p>SmartReceipt&trade; has been successfully installed. SubwayPOS&reg; will now open automatically.</p>
+          <p><span>Questions?</span> Give us a call at (866) 688-7428</p>
+          <a href="#" class="button" id="closeInstallation">Finish Installation</a>
         </div>
       </div>
 
