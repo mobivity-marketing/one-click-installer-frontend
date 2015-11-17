@@ -161,7 +161,7 @@ a {
 #gettingStarted {
 
 	h2 {
-		padding-top: $gutter/2;
+		
 	}
 
 	.col-sm-3 {
@@ -195,7 +195,6 @@ a {
 #installation {
 
 	h2 {
-		padding-top: $gutter/2;
 	}
 
 	.col-sm-3 {
@@ -273,7 +272,7 @@ a {
 
 	.progress-pie-chart {
 	  margin: 0px auto;
-	  margin-top: $gutter*6;
+	  margin-top: $gutter*6.25;
 	}
 }
 
@@ -282,7 +281,6 @@ a {
 #error {
 	
 	h2 {
-		padding-top: $gutter/2;
 		color: $red;
 	}
 
@@ -291,6 +289,7 @@ a {
 		p {
 			font-weight: 700;
 			color: $black;
+			padding: $gutter*1.25 0;
 
 			span {
 				color: $grey;
@@ -298,10 +297,6 @@ a {
 
 		}
 
-	}
-
-	p {
-		padding: $gutter*1.75 0;
 	}
 
 }
