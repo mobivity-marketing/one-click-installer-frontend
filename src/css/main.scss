@@ -194,8 +194,26 @@ a {
 
 #installation {
 
+	h2 {
+		padding-top: $gutter/2;
+	}
+
+	.col-sm-3 {
+
+		p {
+			font-weight: 700;
+			color: $black;
+
+			span {
+				color: $grey;
+			}
+
+		}
+
+	}
+
 	p {
-		padding: $gutter*1.5 0;
+		padding: $gutter*1.25 0;
 	}
 
 	@mixin circle($size) {
@@ -255,6 +273,7 @@ a {
 
 	.progress-pie-chart {
 	  margin: 0px auto;
+	  margin-top: $gutter*6;
 	}
 }
 
