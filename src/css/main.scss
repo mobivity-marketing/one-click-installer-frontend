@@ -33,6 +33,7 @@ html, body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  overflow: hidden;
 }
 
 h1, h2, h3 {
@@ -130,7 +131,7 @@ a {
 
 // Introduction
 
-#introduction, #installation, #storeInformation, #completion {
+#gettingStarted, #installation, #error, #completion {
 	text-align: center;
 
 	.content {
@@ -157,26 +158,34 @@ a {
 
 }
 
-// Store Information Container
+#gettingStarted {
 
-#storeInformation {
-	
 	h2 {
-		// font-size: 1.65em;
 		padding-top: $gutter/2;
-		
-		span {
+	}
+
+	.col-sm-3 {
+
+		p {
+			font-weight: 700;
 			color: $black;
+
+			span {
+				color: $grey;
+			}
+
 		}
 
 	}
 
 	p {
-		padding: $gutter*2 0;
+		padding: $gutter*1.25 0;
 	}
 
-	.button {
-		padding: $gutter/3 $gutter;
+	.note {
+		padding: 0;
+		font-size: 1em;
+		padding-bottom: $gutter;
 	}
 
 }
