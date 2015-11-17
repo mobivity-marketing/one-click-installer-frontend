@@ -22,8 +22,8 @@ $gutter: 20px;
 // General/Typography
 
 html, body {
-	width: 840px;
-	height: 450px;
+	width: 900px;
+	height: 500px;
 	margin: 0;
 	padding: 0;
 	font-family: 'Roboto', sans-serif;
@@ -82,6 +82,15 @@ a {
 
 		}
 
+		&.grey {
+			background: $grey;
+			
+			&:hover {
+				background: $black;
+			}
+
+		}
+
 	}
 
 }
@@ -99,18 +108,30 @@ a {
 	margin: 0 auto -80px;
 }
 
+// Header
+
+#header {
+	padding-top: $gutter*2;
+	padding-bottom: $gutter;
+
+	
+	img.logo {
+		margin: 0px auto;
+		width: 100%;
+	}
+
+	.minButton {
+		margin-top: $gutter/3;
+		text-align: right;
+		font-size: 0.75em;
+	}
+
+}
+
 // Introduction
 
 #introduction, #installation, #storeInformation, #completion {
 	text-align: center;
-	padding-top: $gutter*2;
-	padding-bottom: $gutter;
-	
-	img.logo {
-		width: 80%;
-		margin: 0px auto;
-		margin-bottom: $gutter;
-	}
 
 	.content {
 		padding: $gutter 0;
@@ -132,6 +153,30 @@ a {
 
 	span {
 		font-weight: 400;
+	}
+
+}
+
+// Store Information Container
+
+#storeInformation {
+	
+	h2 {
+		// font-size: 1.65em;
+		padding-top: $gutter/2;
+		
+		span {
+			color: $black;
+		}
+
+	}
+
+	p {
+		padding: $gutter*2 0;
+	}
+
+	.button {
+		padding: $gutter/3 $gutter;
 	}
 
 }
@@ -202,30 +247,6 @@ a {
 	.progress-pie-chart {
 	  margin: 0px auto;
 	}
-}
-
-// Store Information Container
-
-#storeInformation {
-	
-	h2 {
-		font-size: 1.65em;
-		padding-top: $gutter/2;
-		
-		span {
-			color: $black;
-		}
-
-	}
-
-	p {
-		padding: $gutter*2 0;
-	}
-
-	.button {
-		padding: $gutter/3 $gutter;
-	}
-
 }
 
 // Completion Container

@@ -4,9 +4,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="SmartReceipt instantly transforms millions of real-time customer transactions into intelligent and automated revenue opportunities.">
-    <meta name="author" content="Mobivity">
-    <link rel="icon" href="dist/images/favicon.png">
     <title>SmartReceipt Installer</title>
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -23,18 +20,27 @@
     <!-- Begin Page Wrapper -->
     <div id="wrap">
 
+      <div class="container" id="header">
+        <div class="col-sm-6">
+          <img src="dist/images/sr-logo.png" alt="SmartReceipt&trade; Installation Tool" class="logo">
+        </div>
+        <div class="col-sm-6 minButton">
+          <a href="#" class="button grey">Minimize</a>
+        </div>
+      </div>
+
       <!-- Introduction Container -->
 
-      <div class="container hide" id="introduction">
-        <img src="dist/images/sr-logo.png" alt="SmartReceipt&trade; Installation Tool" class="logo">
+      <div class="container" id="storeInformation">
         <div class="content">
           <h2>Getting Started</h2>
-          <p>Please click <span>Proceed</span> to install SmartReceipt™ on your terminal. This process will take up to 10 minutes and SubwayPOS&reg; will be automatically shut down during this process. If you have any questions, please contact our support team at <span>(866) 688-7428</span>.</p>
+
+          <p>If the above information is correct, please click <span>Continue</span> to complete the SmartReceipt&trade; installation. If not, please contact the SmartReceipt&trade; Support Team at (866) 688-7428.</p>
           <div class="col-sm-6">
             <a href="#" class="button red">Cancel</a>
           </div>
           <div class="col-sm-6">
-            <a href="#" class="button">Proceed</a>
+            <a href="#" class="button">Continue</a>
           </div>
         </div>
       </div>
@@ -44,7 +50,6 @@
       <!-- Installation Container -->
 
       <div class="container hide" id="installation">
-        <img src="dist/images/sr-logo.png" alt="SmartReceipt&trade; Installation Tool" class="logo">
         <div class="content">
           <h2>Your Installation is Now In Progress</h2>
           <p>Should you run into any issues, please contact SmartReceipt&trade; Support at <span>(866) 688-7428</span>.</p>
@@ -66,7 +71,6 @@
       <!-- Store Information Container -->
 
       <div class="container hide" id="storeInformation">
-        <img src="dist/images/sr-logo.png" alt="SmartReceipt&trade; Installation Tool" class="logo">
         <div class="content">
           <h2>Store Number <span id="storeNumber">IPC400</span> | Satellite Number <span id="satNumber">200</span> | Terminal Number <span id="termNumber">200</span></h2>
           <p>If this is correct, please click <span>yes</span> to proceed with the installation. If this is not correct, please contact SUBWAY&reg; Help Desk to update your system's store records.</p>
@@ -83,8 +87,7 @@
 
       <!-- Completion Container -->
 
-      <div class="container " id="completion">
-        <img src="dist/images/sr-logo.png" alt="SmartReceipt&trade; Installation Tool" class="logo">
+      <div class="container hide" id="completion">
         <div class="content">
           <h2>SmartReceipt&trade; is Fully Installed!</h2>
           <p>Please perform a test transaction to confirm that receipts are printing properly. If you have any questions, please contact SmartReceipt&trade; Support at <span>(866) 688-7428</span>. If your receipts are not printing after installation, please open the SmartReceipt&trade; tray icon, toggle SmartReceipt&trade; to <span>OFF</span> and contact SmartReceipt&trade; to assist with the installation.</p>
