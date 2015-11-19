@@ -215,6 +215,8 @@ a {
 		padding: $gutter*1.25 0;
 	}
 
+}
+
 	@mixin circle($size) {
 	  content: "";
 	  position: absolute;
@@ -271,10 +273,8 @@ a {
 	}
 
 	.progress-pie-chart {
-	  margin: 0px auto;
-	  margin-top: $gutter*6.25;
+	  margin: $gutter*6.25 auto;
 	}
-}
 
 // Error Container
 
