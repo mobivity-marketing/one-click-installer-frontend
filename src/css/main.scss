@@ -131,7 +131,7 @@ a {
 
 // Introduction
 
-#gettingStarted, #installation, #error, #completion {
+#gettingStarted, #installation, #error, #completion, #timeout {
 	text-align: center;
 
 	.content {
@@ -273,12 +273,12 @@ a {
 	}
 
 	.progress-pie-chart {
-	  margin: $gutter*6.25 auto;
+	  margin: $gutter*4 auto;
 	}
 
 // Error Container
 
-#error {
+#error, #timeout {
 	
 	h2 {
 		color: $red;
