@@ -131,7 +131,7 @@ a {
 
 // Introduction
 
-#gettingStarted, #installation, #error, #completion, #timeout {
+#gettingStarted, #installation, #error, #completion, #timeout, #nointernet {
 	text-align: center;
 
 	.content {
@@ -278,7 +278,7 @@ a {
 
 // Error Container
 
-#error, #timeout {
+#error, #timeout, #nointernet {
 	
 	h2 {
 		color: $red;
